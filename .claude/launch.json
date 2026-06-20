@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "france-trip",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-p", "3000", "src"],
+      "port": 3000
+    }
+  ]
+}

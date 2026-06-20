@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>France Trip — July 2026</title>
+
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            terracotta: '#C0674A',
+            lavender:   '#8B7BA8',
+            cream:      '#F5F0E8',
+            olive:      '#6B7B3A',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --color-terracotta: #C0674A;
+      --color-lavender:   #8B7BA8;
+      --color-cream:      #F5F0E8;
+      --color-olive:      #6B7B3A;
+    }
+    body { background-color: #F5F0E8; overflow-x: hidden; }
+    .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    /* Edú closed badge */
+    .closed-badge {
+      display: inline-block;
+      background: #fee2e2;
+      color: #b91c1c;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      padding: 0.15rem 0.5rem;
+      border-radius: 9999px;
+      text-transform: uppercase;
+    }
+    /* Focus ring override for custom colors */
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #C0674A;
+      box-shadow: 0 0 0 2px rgba(192,103,74,0.15);
+    }
+  </style>
+</head>
+
+<!-- ─────────────────────────────────────────────
+     MOD-1: App Shell
+     pb-20 gives space above fixed bottom nav
+──────────────────────────────────────────────── -->
+<body class="font-sans text-gray-800 pb-20 min-h-screen">
+
+  <!-- ═══════════════════════════════════════════
+       MOD-2: Home Tab
+  ════════════════════════════════════════════ -->
+  <section id="tab-home" class="tab-panel px-4 py-6">
+
+    <header class="mb-6">
+      <h1 class="text-2xl font-bold text-terracotta leading-tight">France Family Trip</h1>
+      <p class="text-olive font-medium mt-0.5">St. Rémy-de-Provence · July 2026</p>
+    </header>
+
+    <!-- WhatsApp Group -->
+    <div class="mb-6">
+      <a href="https://chat.whatsapp.com/EsaLeGbf8qv0kxzjaCi3vy"
+         target="_blank"
+         class="flex items-center justify-center gap-2.5 bg-green-500 text-white font-semibold text-sm px-4 py-3 rounded-xl shadow-sm active:opacity-80 w-full">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 shrink-0">
+          <path d="M12.002 2C6.477 2 2 6.477 2 12.002c0 1.773.463 3.438 1.27 4.888L2 22l5.238-1.252A9.96 9.96 0 0 0 12.002 22C17.525 22 22 17.523 22 12.002 22 6.477 17.525 2 12.002 2zm0 1.802a8.2 8.2 0 1 1 0 16.4 8.165 8.165 0 0 1-4.07-1.086l-.292-.174-3.11.742.77-3.027-.19-.31A8.164 8.164 0 0 1 3.8 12.002a8.2 8.2 0 0 1 8.202-8.2zm-2.17 4.5c-.2-.444-.41-.453-.6-.461-.155-.007-.333-.007-.51-.007-.178 0-.467.067-.712.333-.244.267-.933.912-.933 2.222s.955 2.578 1.089 2.756c.133.178 1.844 2.956 4.556 4.022.636.245 1.133.39 1.52.5.638.181 1.219.155 1.678.094.512-.068 1.578-.645 1.8-1.267.222-.622.222-1.156.155-1.267-.066-.111-.244-.178-.51-.311-.267-.133-1.578-.778-1.822-.867-.245-.089-.423-.133-.6.133-.178.267-.689.867-.845 1.045-.155.178-.311.2-.578.067-.267-.134-1.126-.415-2.145-1.323-.792-.707-1.328-1.58-1.483-1.847-.156-.267-.017-.411.117-.544.12-.12.267-.311.4-.467.133-.155.178-.267.267-.444.089-.178.044-.334-.022-.467-.067-.133-.588-1.445-.812-1.978z"/>
+        </svg>
+        Family WhatsApp Group
+      </a>
+    </div>
+
+    <!-- Travelers -->
+    <div class="mb-6">
+      <h2 class="text-lg font-semibold text-lavender mb-2">Travelers</h2>
+      <div class="bg-white rounded-xl shadow-sm p-4">
+        <ul class="space-y-1.5 text-sm">
+          <li class="flex items-baseline gap-1"><span class="font-medium">Olivier Gers</span></li>
+          <li class="flex items-baseline gap-1"><span class="font-medium">Dana Gers</span></li>
+          <li class="flex items-baseline gap-1"><span class="font-medium">Emmanuelle Gers</span> <span class="text-gray-400 text-xs">(daughter)</span></li>
+          <li class="flex items-baseline gap-1"><span class="font-medium">Lukas Stachtiaris</span> <span class="text-gray-400 text-xs">(Emmanuelle's partner)</span></li>
+          <li class="flex items-baseline gap-1"><span class="font-medium">Alexandra Gers</span> <span class="text-gray-400 text-xs">(daughter)</span></li>
+          <li class="flex items-baseline gap-1"><span class="font-medium">Colby Gates</span> <span class="text-gray-400 text-xs">(Alexandra's partner)</span></li>
+          <li class="flex items-baseline gap-1"><span class="font-medium">Frederick Gers</span> <span class="text-gray-400 text-xs">(Olivier's brother)</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Family Contacts -->
+    <div class="mb-6">
+      <h2 class="text-lg font-semibold text-lavender mb-2">Contacts</h2>
+      <div class="bg-white rounded-xl shadow-sm divide-y divide-gray-100">
+        <a href="tel:+14357290243" class="flex items-center justify-between px-4 py-3 active:bg-cream">
+          <span class="font-medium text-sm text-gray-800">Olivier</span>
+          <span class="text-sm text-terracotta font-medium">+1 435 729 0243</span>
+        </a>
+        <a href="tel:+14357290007" class="flex items-center justify-between px-4 py-3 active:bg-cream">
+          <span class="font-medium text-sm text-gray-800">Dana</span>
+          <span class="text-sm text-terracotta font-medium">+1 435 729 0007</span>
+        </a>
+        <a href="tel:+14357299211" class="flex items-center justify-between px-4 py-3 active:bg-cream">
+          <span class="font-medium text-sm text-gray-800">Emmanuelle</span>
+          <span class="text-sm text-terracotta font-medium">+1 435 729 9211</span>
+        </a>
+        <a href="tel:+14358009045" class="flex items-center justify-between px-4 py-3 active:bg-cream">
+          <span class="font-medium text-sm text-gray-800">Alexandra</span>
+          <span class="text-sm text-terracotta font-medium">+1 435 800 9045</span>
+        </a>
+        <a href="tel:+19783957488" class="flex items-center justify-between px-4 py-3 active:bg-cream">
+          <span class="font-medium text-sm text-gray-800">Lukas</span>
+          <span class="text-sm text-terracotta font-medium">+1 978 395 7488</span>
+        </a>
+        <a href="tel:+13392047556" class="flex items-center justify-between px-4 py-3 active:bg-cream">
+          <span class="font-medium text-sm text-gray-800">Colby</span>
+          <span class="text-sm text-terracotta font-medium">+1 339 204 7556</span>
+        </a>
+        <a href="tel:+33688063921" class="flex items-center justify-between px-4 py-3 active:bg-cream">
+          <span class="font-medium text-sm text-gray-800">Frederick</span>
+          <span class="text-sm text-terracotta font-medium">+33 6 88 06 39 21</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="mb-6">
+      <h2 class="text-lg font-semibold text-lavender mb-2">Trip Timeline</h2>
+      <div class="table-scroll rounded-xl shadow-sm overflow-hidden">
+        <table class="text-sm w-full border-collapse bg-white">
+          <thead>
+            <tr class="bg-terracotta text-white">
+              <th class="px-3 py-2 text-left whitespace-nowrap font-semibold">Date</th>
+              <th class="px-3 py-2 text-left font-semibold">Event</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-3 py-2.5 font-semibold whitespace-nowrap text-terracotta">Jul 2</td>
+              <td class="px-3 py-2.5">Olivier + Dana depart SLC on DL 220</td>
+            </tr>
+            <tr class="bg-cream">
+              <td class="px-3 py-2.5 font-semibold whitespace-nowrap text-terracotta">Jul 3</td>
+              <td class="px-3 py-2.5">Arrive CDG ~9:30 AM. Full group assembles at Hotel Belmont Paris around lunch</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-2.5 font-semibold whitespace-nowrap text-terracotta">Jul 4</td>
+              <td class="px-3 py-2.5">Olivier, Dana, Emmanuelle, Lukas: TGV to Avignon then St. Rémy</td>
+            </tr>
+            <tr class="bg-cream">
+              <td class="px-3 py-2.5 font-semibold whitespace-nowrap text-terracotta">Jul 5</td>
+              <td class="px-3 py-2.5">Alexandra, Colby: TGV to Avignon then St. Rémy (extra Paris night)</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-2.5 font-semibold whitespace-nowrap text-terracotta">Jul 5–11</td>
+              <td class="px-3 py-2.5">Full family at the house in St. Rémy-de-Provence</td>
+            </tr>
+            <tr class="bg-cream">
+              <td class="px-3 py-2.5 font-semibold whitespace-nowrap text-terracotta">Jul 10</td>
+              <td class="px-3 py-2.5">Emmanuelle + Lukas: TGV return to Paris</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-2.5 font-semibold whitespace-nowrap text-terracotta">Jul 11</td>
+              <td class="px-3 py-2.5">Olivier, Dana, Alexandra, Colby: TGV return to Paris</td>
+            </tr>
+            <tr class="bg-cream">
+              <td class="px-3 py-2.5 font-semibold whitespace-nowrap text-terracotta">Jul 12</td>
+              <td class="px-3 py-2.5">Olivier + Dana: DL 221 CDG to SLC</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- The House -->
+    <div class="mb-6">
+      <h2 class="text-lg font-semibold text-lavender mb-2">The House</h2>
+      <div class="bg-white rounded-xl shadow-sm p-4 border-l-4 border-terracotta">
+        <p class="font-semibold text-gray-800">314 Chemin de Carraire de la Crau</p>
+        <p class="text-gray-600 mb-3">13210 Saint-Rémy-de-Provence</p>
+        <a href="https://maps.google.com/?q=314+Chemin+de+Carraire+de+la+Crau,+13210+Saint-R%C3%A9my-de-Provence"
+           target="_blank"
+           class="inline-flex items-center gap-1.5 bg-terracotta text-white text-sm font-semibold px-4 py-2 rounded-lg active:opacity-80">
+          📍 Open in Maps
+        </a>
+      </div>
+    </div>
+
+    <!-- Flights -->
+    <div class="mb-2">
+      <h2 class="text-lg font-semibold text-lavender mb-2">Flights</h2>
+      <div class="space-y-3">
+        <div class="bg-white rounded-xl shadow-sm p-4">
+          <p class="text-xs font-semibold text-olive uppercase tracking-wide mb-1">Outbound — July 2</p>
+          <p class="font-semibold text-gray-800">Delta DL 220 · SLC → CDG</p>
+          <p class="text-sm text-gray-600 mt-1">Departs ~3:25 PM MDT · Arrives ~9:30 AM CEST (Jul 3)</p>
+          <p class="text-sm text-gray-600">Terminal 2E · Airbus A330-300 · Non-stop</p>
+          <p class="text-sm text-gray-500 mt-1">Passengers: Olivier Gers, Dana Gers</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm p-4">
+          <p class="text-xs font-semibold text-olive uppercase tracking-wide mb-1">Return — July 12</p>
+          <p class="font-semibold text-gray-800">Delta DL 221 · CDG → SLC</p>
+          <p class="text-sm text-gray-500 mt-1">Passengers: Olivier Gers, Dana Gers</p>
+          <p class="text-sm text-gray-400 italic mt-0.5">Departure time: confirm from booking confirmation</p>
+        </div>
+        <p class="text-xs text-gray-400 px-1">
+          Emmanuelle, Lukas, Alexandra, Colby, and Frederick have separate flight arrangements — post details to the Notes board so everyone has them.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       MOD-3: Trains Tab
+  ════════════════════════════════════════════ -->
+  <section id="tab-trains" class="tab-panel px-4 py-6 hidden">
+
+    <header class="mb-5">
+      <h1 class="text-2xl font-bold text-terracotta">Trains</h1>
+      <p class="text-olive font-medium mt-0.5">All TGV bookings</p>
+    </header>
+
+    <!-- Card 1: Outbound Group 1 — July 4 -->
+    <div class="bg-white rounded-xl shadow-sm mb-4 overflow-hidden">
+      <div class="bg-terracotta px-4 py-3">
+        <p class="text-red-100 text-xs font-semibold uppercase tracking-wide">Outbound — Saturday July 4</p>
+        <p class="text-white font-bold text-base mt-0.5">TGV INOUI 6109</p>
+        <p class="text-red-100 text-sm">Paris Gare de Lyon → Avignon TGV</p>
+      </div>
+      <div class="px-4 py-3 grid grid-cols-3 gap-2 text-center border-b border-gray-100">
+        <div>
+          <p class="text-xs text-gray-400">Departs</p>
+          <p class="font-bold text-sm">10:38 AM</p>
+        </div>
+        <div>
+          <p class="text-xs text-gray-400">Arrives</p>
+          <p class="font-bold text-sm">1:19 PM</p>
+        </div>
+        <div>
+          <p class="text-xs text-gray-400">Duration</p>
+          <p class="font-bold text-sm">2h 41min</p>
+        </div>
+      </div>
+      <div class="px-4 py-2 flex flex-wrap gap-x-4 gap-y-1 text-sm text-gray-600 border-b border-gray-100">
+        <span>2nd Class</span>
+        <span>Coach <strong>8</strong></span>
+        <span class="text-terracotta font-semibold">Board by 10:36 AM</span>
+      </div>
+      <div class="table-scroll">
+        <table class="text-sm w-full border-collapse">
+          <thead>
+            <tr class="bg-gray-50">
+              <th class="px-3 py-2 text-left text-gray-500 font-medium">Traveler</th>
+              <th class="px-3 py-2 text-left text-gray-500 font-medium">Seat</th>
+              <th class="px-3 py-2 text-left text-gray-500 font-medium">Position</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-gray-50">
+              <td class="px-3 py-2.5">Olivier Gers</td>
+              <td class="px-3 py-2.5 font-bold text-terracotta text-base">813</td>
+              <td class="px-3 py-2.5 text-gray-500">Lower deck, Window</td>
+            </tr>
+            <tr class="border-t border-gray-50 bg-gray-50/50">
+              <td class="px-3 py-2.5">Dana Gers</td>
+              <td class="px-3 py-2.5 font-bold text-terracotta text-base">806</td>
+              <td class="px-3 py-2.5 text-gray-500">Lower deck, Corridor</td>
+            </tr>
+            <tr class="border-t border-gray-50">
+              <td class="px-3 py-2.5">Emmanuelle Gers</td>
+              <td class="px-3 py-2.5 font-bold text-terracotta text-base">807</td>
+              <td class="px-3 py-2.5 text-gray-500">Lower deck, Window</td>
+            </tr>
+            <tr class="border-t border-gray-50 bg-gray-50/50">
+              <td class="px-3 py-2.5">Lukas Stachtiaris</td>
+              <td class="px-3 py-2.5 font-bold text-terracotta text-base">812</td>
+              <td class="px-3 py-2.5 text-gray-500">Lower deck, Corridor</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Card 2: Outbound Group 2 — July 5 -->
+    <div class="bg-white rounded-xl shadow-sm mb-4 overflow-hidden">
+      <div class="bg-terracotta px-4 py-3">
+        <p class="text-red-100 text-xs font-semibold uppercase tracking-wide">Outbound — Sunday July 5</p>
+        <p class="text-white font-bold text-base mt-0.5">TGV INOUI 6109</p>
+        <p class="text-red-100 text-sm">Paris Gare de Lyon → Avignon TGV</p>
+      </div>
+      <div class="px-4 py-3 grid grid-cols-3 gap-2 text-center border-b border-gray-100">
+        <div>
+          <p class="text-xs text-gray-400">Departs</p>
+          <p class="font-bold text-sm">10:38 AM</p>
+        </div>
+        <div>
+          <p class="text-xs text-gray-400">Arrives</p>
+          <p class="font-bold text-sm">1:19 PM</p>
+        </div>
+        <div>
+          <p class="text-xs text-gray-400">Duration</p>
+          <p class="font-bold text-sm">2h 41min</p>
+        </div>
+      </div>
+      <div class="px-4 py-2 flex flex-wrap gap-x-4 gap-y-1 text-sm text-gray-600 border-b border-gray-100">
+        <span>2nd Class</span>
+        <span>Coach <strong>15</strong></span>
+        <span class="text-terracotta font-semibold">Board by 10:36 AM</span>
+      </div>
+      <div class="table-scroll">
+        <table class="text-sm w-full border-collapse">
+          <thead>
+            <tr class="bg-gray-50">
+              <th class="px-3 py-2 text-left text-gray-500 font-medium">Traveler</th>
+              <th class="px-3 py-2 text-left text-gray-500 font-medium">Seat</th>
+              <th class="px-3 py-2 text-left text-gray-500 font-medium">Position</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-gray-50">
+              <td class="px-3 py-2.5">Alexandra Gers</td>
+              <td class="px-3 py-2.5 font-bold text-terracotta text-base">559</td>
+              <td class="px-3 py-2.5 text-gray-500">Upper deck, Window</td>
+            </tr>
+            <tr class="border-t border-gray-50 bg-gray-50/50">
+              <td class="px-3 py-2.5">Colby Gates</td>
+              <td class="px-3 py-2.5 font-bold text-terracotta text-base">558</td>
+              <td class="px-3 py-2.5 text-gray-500">Upper deck, Corridor</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Card 3: Return Emmanuelle & Lukas — July 10 -->
+    <div class="bg-white rounded-xl shadow-sm mb-4 overflow-hidden">
+      <div class="bg-lavender px-4 py-3">
+        <p class="text-purple-100 text-xs font-semibold uppercase tracking-wide">Return — Friday July 10</p>
+        <p class="text-white font-bold text-base mt-0.5">TGV INOUI 6120</p>
+        <p class="text-purple-100 text-sm">Avignon TGV → Paris Gare de Lyon</p>
+      </div>
+      <div class="px-4 py-3 grid grid-cols-3 gap-2 text-center border-b border-gray-100">
+        <div>
+          <p class="text-xs text-gray-400">Departs</p>
+          <p class="font-bold text-sm">2:41 PM</p>
+        </div>
+        <div>
+          <p class="text-xs text-gray-400">Arrives</p>
+          <p class="font-bold text-sm">5:22 PM</p>
+        </div>
+        <div>
+          <p class="text-xs text-gray-400">Duration</p>
+          <p class="font-bold text-sm">2h 41min</p>
+        </div>
+      </div>
+      <div class="px-4 py-2 flex flex-wrap gap-x-4 gap-y-1 text-sm text-gray-600 border-b border-gray-100">
+        <span>1st Class</span>
+        <span>Coach <strong>12</strong></span>
+        <span class="text-lavender font-semibold">Board by 2:39 PM</span>
+      </div>
+      <div class="table-scroll">
+        <table class="text-sm w-full border-collapse">
+          <thead>
+            <tr class="bg-gray-50">
+              <th class="px-3 py-2 text-left text-gray-500 font-medium">Traveler</th>
+              <th class="px-3 py-2 text-left text-gray-500 font-medium">Seat</th>
+              <th class="px-3 py-2 text-left text-gray-500 font-medium">Position</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-gray-50">
+              <td class="px-3 py-2.5">Emmanuelle Gers</td>
+              <td class="px-3 py-2.5 font-bold text-lavender text-base">272</td>
+              <td class="px-3 py-2.5 text-gray-500">Upper deck, Window</td>
+            </tr>
+            <tr class="border-t border-gray-50 bg-gray-50/50">
+              <td class="px-3 py-2.5">Lukas Stachtiaris</td>
+              <td class="px-3 py-2.5 font-bold text-lavender text-base">271</td>
+              <td class="px-3 py-2.5 text-gray-500">Upper deck, Corridor</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Card 4: Return Main Group — July 11 -->
+    <div class="bg-white rounded-xl shadow-sm mb-4 overflow-hidden">
+      <div class="bg-lavender px-4 py-3">
+        <p class="text-purple-100 text-xs font-semibold uppercase tracking-wide">Return — Saturday July 11</p>
+        <p class="text-white font-bold text-base mt-0.5">TGV INOUI 6122</p>
+        <p class="text-purple-100 text-sm">Avignon TGV → Paris Gare de Lyon</p>
+      </div>
+      <div class="px-4 py-3 grid grid-cols-3 gap-2 text-center border-b border-gray-100">
+        <div>
+          <p class="text-xs text-gray-400">Departs</p>
+          <p class="font-bold text-sm">3:37 PM</p>
+        </div>
+        <div>
+          <p class="text-xs text-gray-400">Arrives</p>
+          <p class="font-bold text-sm">6:22 PM</p>
+        </div>
+        <div>
+          <p class="text-xs text-gray-400">Duration</p>
+          <p class="font-bold text-sm">2h 45min</p>
+        </div>
+      </div>
+      <div class="px-4 py-2 flex flex-wrap gap-x-4 gap-y-1 text-sm text-gray-600 border-b border-gray-100">
+        <span>1st Class</span>
+        <span>Coach <strong>12</strong></span>
+        <span class="text-lavender font-semibold">Board by 3:35 PM</span>
+      </div>
+      <div class="table-scroll">
+        <table class="text-sm w-full border-collapse">
+          <thead>
+            <tr class="bg-gray-50">
+              <th class="px-3 py-2 text-left text-gray-500 font-medium">Traveler</th>
+              <th class="px-3 py-2 text-left text-gray-500 font-medium">Seat</th>
+              <th class="px-3 py-2 text-left text-gray-500 font-medium">Position</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-gray-50">
+              <td class="px-3 py-2.5">Olivier Gers</td>
+              <td class="px-3 py-2.5 font-bold text-lavender text-base">244</td>
+              <td class="px-3 py-2.5 text-gray-500">Upper deck, Corridor</td>
+            </tr>
+            <tr class="border-t border-gray-50 bg-gray-50/50">
+              <td class="px-3 py-2.5">Dana Gers</td>
+              <td class="px-3 py-2.5 font-bold text-lavender text-base">247</td>
+              <td class="px-3 py-2.5 text-gray-500">Upper deck, Corridor</td>
+            </tr>
+            <tr class="border-t border-gray-50">
+              <td class="px-3 py-2.5">Alexandra Gers</td>
+              <td class="px-3 py-2.5 font-bold text-lavender text-base">248</td>
+              <td class="px-3 py-2.5 text-gray-500">Upper deck, Window</td>
+            </tr>
+            <tr class="border-t border-gray-50 bg-gray-50/50">
+              <td class="px-3 py-2.5">Colby Gates</td>
+              <td class="px-3 py-2.5 font-bold text-lavender text-base">245</td>
+              <td class="px-3 py-2.5 text-gray-500">Upper deck, Window</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Transfer Note -->
+    <div class="bg-white border border-lavender/30 rounded-xl px-4 py-3 text-sm text-gray-700">
+      <p class="font-semibold text-lavender mb-1">🚕 Avignon TGV → St. Rémy</p>
+      <p>The TGV station is outside the city center. Allow <strong>35–40 minutes</strong> by taxi or pre-arranged car to reach the house. Book transfers in advance for July.</p>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       MOD-4: Stay Tab
+  ════════════════════════════════════════════ -->
+  <section id="tab-stay" class="tab-panel px-4 py-6 hidden">
+
+    <header class="mb-5">
+      <h1 class="text-2xl font-bold text-terracotta">Stay</h1>
+      <p class="text-olive font-medium mt-0.5">Hotels &amp; the house</p>
+    </header>
+
+    <!-- Card 1: Hotel Le Belmont Paris -->
+    <div class="bg-white rounded-xl shadow-sm mb-4 overflow-hidden">
+      <div class="bg-terracotta px-4 py-3">
+        <p class="text-red-100 text-xs font-semibold uppercase tracking-wide">Outbound — July 3</p>
+        <p class="text-white font-bold text-base mt-0.5">Hotel Le Belmont Paris</p>
+      </div>
+      <div class="px-4 py-4 space-y-3 text-sm">
+        <div>
+          <p class="text-gray-400 text-xs uppercase tracking-wide font-semibold mb-0.5">Address</p>
+          <p class="font-medium text-gray-800">30 Rue de Bassano, 75116 Paris</p>
+        </div>
+        <div>
+          <p class="text-gray-400 text-xs uppercase tracking-wide font-semibold mb-0.5">Metro</p>
+          <p class="text-gray-700">George V (Line 1) — 5 min walk to Champs-Élysées</p>
+        </div>
+        <div>
+          <p class="text-gray-400 text-xs uppercase tracking-wide font-semibold mb-0.5">Dates</p>
+          <p class="text-gray-700">Check-in July 3 · Check-out July 4 morning</p>
+        </div>
+        <div>
+          <p class="text-gray-400 text-xs uppercase tracking-wide font-semibold mb-0.5">Neighborhood</p>
+          <p class="text-gray-700">4-star hotel, Golden Triangle</p>
+        </div>
+        <p class="text-gray-400 text-xs border-t border-gray-100 pt-3">
+          Full group assembles here around lunchtime July 3.<br>
+          Alexandra and Colby stay one additional night (July 4) and depart the morning of July 5 for the train.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2: The House -->
+    <div class="bg-white rounded-xl shadow-sm mb-4 overflow-hidden">
+      <div class="bg-olive px-4 py-3">
+        <p class="text-green-100 text-xs font-semibold uppercase tracking-wide">Jul 5–11</p>
+        <p class="text-white font-bold text-base mt-0.5">The House — St. Rémy-de-Provence</p>
+      </div>
+      <div class="px-4 py-4">
+        <p class="text-gray-400 text-xs uppercase tracking-wide font-semibold mb-1">Address</p>
+        <p class="font-semibold text-gray-800 text-base">314 Chemin de Carraire de la Crau</p>
+        <p class="text-gray-600 mb-4">13210 Saint-Rémy-de-Provence</p>
+        <a href="https://maps.google.com/?q=314+Chemin+de+Carraire+de+la+Crau,+13210+Saint-R%C3%A9my-de-Provence"
+           target="_blank"
+           class="inline-flex items-center gap-1.5 bg-terracotta text-white text-sm font-semibold px-4 py-2 rounded-lg active:opacity-80">
+          📍 Open in Maps
+        </a>
+      </div>
+    </div>
+
+    <!-- Card 3: Return Paris TBD -->
+    <div class="bg-white rounded-xl shadow-sm mb-4 overflow-hidden">
+      <div class="bg-lavender px-4 py-3">
+        <p class="text-purple-100 text-xs font-semibold uppercase tracking-wide">Return — July 11</p>
+        <p class="text-white font-bold text-base mt-0.5">Paris Hotel — TBD</p>
+      </div>
+      <div class="px-4 py-4 text-sm space-y-2">
+        <p class="font-medium text-gray-800">Olivier + Dana · Night of July 11</p>
+        <p class="text-gray-600">Train arrives Paris Gare de Lyon at <strong>6:22 PM</strong>.</p>
+        <p class="text-gray-600">Hotel will be booked day-of or the day before via <strong>HotelTonight</strong>.</p>
+        <p class="text-gray-400 text-xs border-t border-gray-100 pt-3">
+          Once booked, Olivier posts the hotel name and address to the Family Notes board so everyone has it.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       MOD-5: Guide Tab
+  ════════════════════════════════════════════ -->
+  <section id="tab-guide" class="tab-panel px-4 py-6 hidden">
+
+    <header class="mb-5">
+      <h1 class="text-2xl font-bold text-terracotta">Guide</h1>
+      <p class="text-olive font-medium mt-0.5">St. Rémy-de-Provence</p>
+    </header>
+
+    <!-- Fine Dining -->
+    <div class="bg-white rounded-xl shadow-sm mb-4 overflow-hidden">
+      <div class="bg-terracotta px-4 py-3">
+        <p class="text-white font-bold text-base">Fine Dining</p>
+      </div>
+      <div class="px-4 py-4 space-y-4 text-sm">
+        <div>
+          <p class="font-semibold text-gray-800">L'Auberge de Saint-Rémy</p>
+          <p class="text-terracotta text-xs font-semibold mt-0.5">★ Michelin · Chef Fanny Rey</p>
+          <p class="text-gray-600 mt-1">The benchmark for a special-occasion dinner in St. Rémy. Reserve well in advance for July.</p>
+        </div>
+        <div class="border-t border-gray-100 pt-4">
+          <p class="font-semibold text-gray-800">Restaurant de Tourrel</p>
+          <p class="text-terracotta text-xs font-semibold mt-0.5">★ Michelin · 17th-century mansion</p>
+          <p class="text-gray-600 mt-1">Tasting menus and exceptional wine list. Book early.</p>
+        </div>
+        <div class="border-t border-gray-100 pt-4">
+          <p class="font-semibold text-gray-800">Domaine de Baumanière</p>
+          <p class="text-terracotta text-xs font-semibold mt-0.5">★★ Michelin · Les Baux-de-Provence · 20 min</p>
+          <p class="text-gray-600 mt-1">One of the landmark addresses in French gastronomy. Worth the drive for a truly special evening. Dress accordingly.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Casual Restaurants -->
+    <div class="bg-white rounded-xl shadow-sm mb-4 overflow-hidden">
+      <div class="bg-terracotta px-4 py-3">
+        <p class="text-white font-bold text-base">Casual &amp; Local Favorites</p>
+      </div>
+      <div class="px-4 py-4 space-y-4 text-sm">
+
+        <!-- Edú — full detail -->
+        <div class="bg-cream rounded-lg p-3">
+          <div class="flex items-start justify-between gap-2 mb-1">
+            <p class="font-bold text-gray-800">Edú</p>
+            <span class="closed-badge">Closed Sun &amp; Mon</span>
+          </div>
+          <p class="text-gray-500 text-xs">17 Av. Albert Schweitzer, 13210 Saint-Rémy-de-Provence</p>
+          <p class="text-gray-500 text-xs">+33 4 90 20 94 21 · edu-restaurant.com</p>
+          <p class="text-gray-600 mt-1.5">Mediterranean plates for sharing, natural wines, terrace around a pond. Fooding and Gault &amp; Millau listed. Reservations recommended.</p>
+          <p class="text-gray-500 text-xs mt-1.5">Tue–Sat: Lunch 12:00–1:30 PM · Dinner 7:00–9:00 PM · Own parking</p>
+        </div>
+
+        <div class="border-t border-gray-100 pt-3">
+          <p class="font-semibold text-gray-800">Olga by le Bistrot Découverte</p>
+          <p class="text-gray-600 mt-0.5">Beloved local bistro named after the grandmother who cooked for love. <span class="text-olive font-medium">TheFork 8.9</span></p>
+        </div>
+        <div class="border-t border-gray-100 pt-3">
+          <p class="font-semibold text-gray-800">Restaurant Lou Patio <span class="font-normal text-gray-400">(Hotel le Saint-Rémy)</span></p>
+          <p class="text-gray-600 mt-0.5">Garden terrace dining. <span class="text-olive font-medium">TheFork 8.9</span></p>
+        </div>
+        <div class="border-t border-gray-100 pt-3">
+          <p class="font-semibold text-gray-800">Bistrot Canto Cigalo <span class="font-normal text-gray-400">(Le Vallon de Valrugues)</span></p>
+          <p class="text-gray-600 mt-0.5">Classic Provençal setting in a beautiful hotel. <span class="text-olive font-medium">TheFork 8.6</span></p>
+        </div>
+        <div class="border-t border-gray-100 pt-3">
+          <p class="font-semibold text-gray-800">Bienbon</p>
+          <p class="text-gray-600 mt-0.5">Creative vegetarian and vegan-friendly menu.</p>
+        </div>
+        <div class="border-t border-gray-100 pt-3">
+          <p class="font-semibold text-gray-800">Basta Cosi!</p>
+          <p class="text-gray-600 mt-0.5">Casual Italian for a relaxed evening.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bakery -->
+    <div class="bg-white rounded-xl shadow-sm mb-4 overflow-hidden">
+      <div class="bg-olive px-4 py-3">
+        <p class="text-white font-bold text-base">Bakery</p>
+      </div>
+      <div class="px-4 py-4 text-sm">
+        <p class="font-bold text-gray-800 text-base">Terre et Blé</p>
+        <p class="text-gray-500 text-xs mt-0.5">ZAC de la Gare, 24 Av. Albin Gilles, 13210 Saint-Rémy-de-Provence</p>
+        <p class="text-gray-500 text-xs">+33 4 90 89 72 30 · terredeble.com</p>
+        <div class="mt-3 space-y-1.5 text-gray-700">
+          <p>100% sourdough, wood-fired, organic, grain-to-table. Also serves a daily changing lunch menu.</p>
+          <p class="font-medium text-olive">The best bread in Saint-Rémy — go early, it sells out.</p>
+          <p class="text-gray-500 text-xs">Open on Mondays, which is rare for the area.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Saturday Market -->
+    <div class="bg-white rounded-xl shadow-sm mb-4 overflow-hidden">
+      <div class="bg-olive px-4 py-3">
+        <p class="text-white font-bold text-base">Saturday Market</p>
+      </div>
+      <div class="px-4 py-4 text-sm space-y-3">
+        <p class="text-gray-700">Every Saturday morning through the old town — Boulevard Mirabeau and surrounding streets.</p>
+        <p class="font-semibold text-olive">Family dates: July 5 and July 11</p>
+        <div>
+          <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">Timing</p>
+          <p class="text-gray-700">8:30–9:00 AM — bread and pastries before they sell out</p>
+          <p class="text-gray-700">10:00–11:00 AM — full market in swing</p>
+        </div>
+        <div>
+          <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">What to find</p>
+          <p class="text-gray-700">Fresh produce, olives, local goat cheese, honey, tapenade, lavender, Provençal fabrics, ceramics, local crafts.</p>
+        </div>
+        <div>
+          <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">Practical</p>
+          <p class="text-gray-700">Cash useful for smaller vendors. Park outside the center and walk in — no cars inside during market hours.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Things to Do -->
+    <div class="bg-white rounded-xl shadow-sm mb-4 overflow-hidden">
+      <div class="bg-lavender px-4 py-3">
+        <p class="text-white font-bold text-base">Things to Do</p>
+      </div>
+      <div class="px-4 py-4 text-sm space-y-4">
+        <p class="text-xs font-bold text-lavender uppercase tracking-wide">Near St. Rémy — Under 30 min</p>
+        <div>
+          <p class="font-semibold text-gray-800">Les Baux-de-Provence <span class="text-gray-400 font-normal">· 20 min</span></p>
+          <p class="text-gray-600 mt-0.5">Spectacular hilltop village on white limestone cliffs. Allow 2–3 hours. Go before 10 AM or late afternoon to beat July crowds.</p>
+        </div>
+        <div class="border-t border-gray-100 pt-3">
+          <p class="font-semibold text-gray-800">Saint-Paul-de-Mausole <span class="text-gray-400 font-normal">· walkable</span></p>
+          <p class="text-gray-600 mt-0.5">Van Gogh's asylum. The gardens where he painted are open to visitors. Quiet and genuinely moving.</p>
+        </div>
+        <div class="border-t border-gray-100 pt-3">
+          <p class="font-semibold text-gray-800">Glanum (Les Antiques) <span class="text-gray-400 font-normal">· walkable to road</span></p>
+          <p class="text-gray-600 mt-0.5">Roman ruins at the southern edge of town. Triumphal arch and mausoleum visible from the road for free. The excavated site is worth an hour.</p>
+        </div>
+        <div class="border-t border-gray-100 pt-3">
+          <p class="font-semibold text-gray-800">Les Alpilles Natural Park <span class="text-gray-400 font-normal">· from town</span></p>
+          <p class="text-gray-600 mt-0.5">Cycling and hiking through dramatic white limestone hills. Bike rental available in town.</p>
+        </div>
+
+        <p class="text-xs font-bold text-lavender uppercase tracking-wide border-t border-gray-100 pt-4">Day Trips — 30–60 min</p>
+        <div>
+          <p class="font-semibold text-gray-800">Arles <span class="text-gray-400 font-normal">· 35 min</span></p>
+          <p class="text-gray-600 mt-0.5">Roman amphitheater still in use, Van Gogh trail, excellent restaurant scene. Worth a full day.</p>
+        </div>
+        <div class="border-t border-gray-100 pt-3">
+          <p class="font-semibold text-gray-800">Avignon <span class="text-gray-400 font-normal">· 25 min</span></p>
+          <p class="text-gray-600 mt-0.5">The Palais des Papes, the Pont d'Avignon, great cafés. Easy half-day trip.</p>
+        </div>
+        <div class="border-t border-gray-100 pt-3">
+          <p class="font-semibold text-gray-800">Luberon <span class="text-gray-400 font-normal">· 45–60 min</span></p>
+          <p class="text-gray-600 mt-0.5">Gordes, Roussillon, Bonnieux. Plan a full day. Gordes at sunset is one of the best views in France.</p>
+        </div>
+        <div class="border-t border-gray-100 pt-3">
+          <p class="font-semibold text-gray-800">Camargue <span class="text-gray-400 font-normal">· 45 min</span></p>
+          <p class="text-gray-600 mt-0.5">Pink flamingos, white Camargue horses, salt flats. Best visited in the early morning.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FIFA World Cup -->
+    <div class="bg-white rounded-xl shadow-sm mb-4 overflow-hidden">
+      <div class="bg-terracotta px-4 py-3">
+        <p class="text-white font-bold text-base">⚽ FIFA World Cup 2026</p>
+      </div>
+      <div class="px-4 py-4 text-sm space-y-3">
+        <p class="text-gray-700">The family's stay (Jul 4–11) covers the <strong>Round of 16</strong> (Jul 4–7) and <strong>Quarterfinals</strong> (Jul 9–11). If France is still in the tournament, Provence will be electric.</p>
+        <div>
+          <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">Fan Zones with Giant Screens</p>
+          <ul class="space-y-1 text-gray-700">
+            <li>Avignon · 25 min</li>
+            <li>Arles · 35 min</li>
+            <li>Aix-en-Provence · 40 min</li>
+          </ul>
+          <p class="text-gray-400 text-xs mt-1">Check fanzone-coupedumonde.fr for confirmed locations.</p>
+        </div>
+        <div>
+          <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">In St. Rémy</p>
+          <p class="text-gray-700">Cafés and bars on Place de la République will have screens for any France match.</p>
+        </div>
+        <div>
+          <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">Time Zones</p>
+          <p class="text-gray-700">A 3:00 PM ET kickoff = 9:00 PM local — ideal for an outdoor terrace.</p>
+        </div>
+        <div>
+          <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">Check Bracket</p>
+          <p class="text-gray-700">Confirm France's position the week before departure. Potential France quarterfinal matches: July 9, 10, or 11.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Practical Tips -->
+    <div class="bg-white rounded-xl shadow-sm mb-4 overflow-hidden">
+      <div class="bg-gray-700 px-4 py-3">
+        <p class="text-white font-bold text-base">Practical Tips</p>
+      </div>
+      <div class="px-4 py-4 text-sm divide-y divide-gray-100">
+        <div class="py-3 first:pt-0">
+          <p class="font-semibold text-gray-700">☀️ Weather</p>
+          <p class="text-gray-600 mt-0.5">30–35°C and full sun in July. Carry water everywhere. Siesta (1–4 PM) is real — some shops close.</p>
+        </div>
+        <div class="py-3">
+          <p class="font-semibold text-gray-700">🇫🇷 Language</p>
+          <p class="text-gray-600 mt-0.5">French always appreciated. English spoken in tourist contexts. <em>Bonjour</em> before any request goes a very long way.</p>
+        </div>
+        <div class="py-3">
+          <p class="font-semibold text-gray-700">💶 Cash</p>
+          <p class="text-gray-600 mt-0.5">Useful for markets, Terre et Blé, and parking meters. Restaurants and larger shops take cards.</p>
+        </div>
+        <div class="py-3">
+          <p class="font-semibold text-gray-700">🍷 Rosé Wine</p>
+          <p class="text-gray-600 mt-0.5">Provence produces exceptional rosé. Ask for something local — Domaine Hauvette, Trévallon, and Romanin are nearby estates worth knowing by name.</p>
+        </div>
+        <div class="py-3">
+          <p class="font-semibold text-gray-700">🚗 Driving</p>
+          <p class="text-gray-600 mt-0.5">A car is essential from St. Rémy. Village streets are narrow. Roundabouts everywhere. Drive slowly and calmly.</p>
+        </div>
+        <div class="py-3">
+          <p class="font-semibold text-gray-700">🍽️ Restaurant Timing</p>
+          <p class="text-gray-600 mt-0.5">Dinner: most restaurants open no earlier than 7:30 PM. Lunch: service typically ends by 1:30 PM. Plan accordingly.</p>
+        </div>
+        <div class="py-3 last:pb-0">
+          <p class="font-semibold text-gray-700">📅 Reservations</p>
+          <p class="text-gray-600 mt-0.5">July is peak season. Book Michelin restaurants now. Book Edú at least a week in advance.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       MOD-6: Notes Tab
+  ════════════════════════════════════════════ -->
+  <section id="tab-notes" class="tab-panel px-4 py-6 hidden">
+
+    <header class="mb-5">
+      <h1 class="text-2xl font-bold text-terracotta">Family Notes</h1>
+      <p class="text-olive font-medium mt-0.5">Post a tip, a find, or anything worth sharing</p>
+    </header>
+
+    <!-- Offline Banner -->
+    <div id="notes-offline-banner"
+         class="hidden bg-yellow-50 border border-yellow-200 rounded-xl px-4 py-3 mb-4 text-sm text-yellow-800">
+      📵 You're offline. Notes will appear once you reconnect.
+    </div>
+
+    <!-- Post Form -->
+    <form id="notes-form" class="bg-white rounded-xl shadow-sm p-4 mb-6">
+      <div class="mb-3">
+        <label class="text-xs font-semibold text-gray-400 uppercase tracking-wide block mb-1.5"
+               for="note-name">Your Name</label>
+        <input id="note-name" type="text" required autocomplete="given-name"
+               placeholder="e.g. Emmanuelle"
+               class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm">
+      </div>
+      <div class="mb-4">
+        <label class="text-xs font-semibold text-gray-400 uppercase tracking-wide block mb-1.5"
+               for="note-text">Note</label>
+        <textarea id="note-text" required rows="3"
+                  placeholder="Great wine bar on the square in Arles..."
+                  class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm resize-none"></textarea>
+      </div>
+      <button type="submit"
+              class="w-full bg-terracotta text-white font-semibold py-2.5 rounded-lg text-sm active:opacity-80">
+        Post Note
+      </button>
+    </form>
+
+    <!-- Notes Feed -->
+    <div id="notes-feed" class="space-y-3">
+      <p id="notes-loading" class="text-sm text-gray-400 text-center py-4">Loading notes…</p>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       MOD-1: Bottom Navigation Bar
+  ════════════════════════════════════════════ -->
+  <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 flex z-50 safe-area-inset-bottom">
+    <button data-tab="home"
+            class="nav-btn flex-1 flex flex-col items-center justify-center py-2 gap-0.5 text-terracotta">
+      <span class="text-xl leading-none">🏠</span>
+      <span class="text-xs font-medium">Home</span>
+    </button>
+    <button data-tab="trains"
+            class="nav-btn flex-1 flex flex-col items-center justify-center py-2 gap-0.5 text-gray-400">
+      <span class="text-xl leading-none">🚄</span>
+      <span class="text-xs font-medium">Trains</span>
+    </button>
+    <button data-tab="stay"
+            class="nav-btn flex-1 flex flex-col items-center justify-center py-2 gap-0.5 text-gray-400">
+      <span class="text-xl leading-none">🏡</span>
+      <span class="text-xs font-medium">Stay</span>
+    </button>
+    <button data-tab="guide"
+            class="nav-btn flex-1 flex flex-col items-center justify-center py-2 gap-0.5 text-gray-400">
+      <span class="text-xl leading-none">🗺️</span>
+      <span class="text-xs font-medium">Guide</span>
+    </button>
+    <button data-tab="notes"
+            class="nav-btn flex-1 flex flex-col items-center justify-center py-2 gap-0.5 text-gray-400">
+      <span class="text-xl leading-none">📝</span>
+      <span class="text-xs font-medium">Notes</span>
+    </button>
+  </nav>
+
+  <!-- Firebase Compat SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+  <!-- ─────────────────────────────────────────
+       MOD-1: Tab Router + Offline Detection
+  ──────────────────────────────────────────── -->
+  <script>
+    (function () {
+      var panels  = document.querySelectorAll('.tab-panel');
+      var buttons = document.querySelectorAll('.nav-btn');
+
+      function showTab(name) {
+        panels.forEach(function (p) {
+          p.classList.toggle('hidden', p.id !== 'tab-' + name);
+        });
+        buttons.forEach(function (b) {
+          var active = b.dataset.tab === name;
+          b.classList.toggle('text-terracotta', active);
+          b.classList.toggle('text-gray-400', !active);
+        });
+      }
+
+      buttons.forEach(function (b) {
+        b.addEventListener('click', function () { showTab(b.dataset.tab); });
+      });
+
+      showTab('home');
+
+      // Offline detection
+      function setOnline(online) {
+        document.dispatchEvent(new CustomEvent('onlineStateChange', { detail: { online: online } }));
+      }
+      window.addEventListener('online',  function () { setOnline(true);  });
+      window.addEventListener('offline', function () { setOnline(false); });
+      setOnline(navigator.onLine);
+    })();
+  </script>
+
+  <!-- ─────────────────────────────────────────
+       MOD-6: Firebase + Notes Tab Logic
+  ──────────────────────────────────────────── -->
+  <script>
+    // ── Firebase config ──────────────────────────────────────────────────────
+    // Replace these placeholder values with your project's config from:
+    // Firebase console → Project Settings → General → Your apps → Web app
+    var firebaseConfig = {
+      apiKey:            "AIzaSyABep0zr_fpI4G_LRCMOaCz4u4v550UkYI",
+      authDomain:        "france-trip-2026-d1032.firebaseapp.com",
+      projectId:         "france-trip-2026-d1032",
+      storageBucket:     "france-trip-2026-d1032.firebasestorage.app",
+      messagingSenderId: "549860261509",
+      appId:             "1:549860261509:web:69848415e99f4cd0cf33ec"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
+    var notesCollection = db.collection('notes');
+
+    // ── XSS guard ────────────────────────────────────────────────────────────
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    // ── Real-time feed ───────────────────────────────────────────────────────
+    notesCollection
+      .orderBy('timestamp', 'desc')
+      .onSnapshot(function (snapshot) {
+        var feed    = document.getElementById('notes-feed');
+        var loading = document.getElementById('notes-loading');
+        if (loading) loading.remove();
+        feed.innerHTML = '';
+
+        if (snapshot.empty) {
+          feed.innerHTML = '<p class="text-sm text-gray-400 text-center py-4">No notes yet — be the first to post!</p>';
+          return;
+        }
+
+        snapshot.forEach(function (doc) {
+          var data = doc.data();
+          var name = data.name || '';
+          var text = data.text || '';
+          var ts   = data.timestamp;
+          var dateStr = '';
+          if (ts) {
+            var d = ts.toDate();
+            dateStr = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+                    + ' ' + d.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+          }
+          var card = document.createElement('div');
+          card.className = 'bg-white rounded-xl shadow-sm p-4';
+          card.innerHTML =
+            '<div class="flex justify-between items-baseline mb-1.5 gap-2">' +
+              '<span class="font-semibold text-sm text-terracotta">' + escapeHtml(name) + '</span>' +
+              '<span class="text-xs text-gray-400 shrink-0">' + escapeHtml(dateStr) + '</span>' +
+            '</div>' +
+            '<p class="text-sm text-gray-700 whitespace-pre-wrap leading-relaxed">' + escapeHtml(text) + '</p>';
+          feed.appendChild(card);
+        });
+      }, function (err) {
+        console.error('Firestore error:', err);
+        var feed = document.getElementById('notes-feed');
+        feed.innerHTML = '<p class="text-sm text-red-400 text-center py-4">Could not load notes. Check your connection.</p>';
+      });
+
+    // ── Post form ────────────────────────────────────────────────────────────
+    document.getElementById('notes-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var nameInput = document.getElementById('note-name');
+      var textInput = document.getElementById('note-text');
+      var name = nameInput.value.trim();
+      var text = textInput.value.trim();
+      if (!name || !text) return;
+
+      var btn = e.target.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Posting…';
+
+      notesCollection.add({
+        name: name,
+        text: text,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      }).then(function () {
+        nameInput.value = '';
+        textInput.value = '';
+        btn.disabled = false;
+        btn.textContent = 'Post Note';
+      }).catch(function (err) {
+        console.error('Failed to post note:', err);
+        btn.disabled = false;
+        btn.textContent = 'Post Note';
+        alert('Could not post note. Check your connection and try again.');
+      });
+    });
+
+    // ── Offline state ────────────────────────────────────────────────────────
+    document.addEventListener('onlineStateChange', function (e) {
+      var online = e.detail.online;
+      document.getElementById('notes-offline-banner').classList.toggle('hidden', online);
+      document.getElementById('notes-form').classList.toggle('hidden', !online);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,28 +1,25 @@
-<!-- TECHSTACK.md Template
-     Define the technology choices for your project here.
-     The /generate-architecture and /generate-code commands
-     will use this to make implementation decisions.
-
-     Suggested categories (adapt as needed):
--->
+# Technology Stack
 
 ## Frontend
-<!-- e.g., React, Vue, Svelte, vanilla JS -->
-
-## Backend
-<!-- e.g., Node.js/Express, Python/FastAPI, Go -->
+- Language: HTML, CSS, and JavaScript (vanilla — no framework)
+- Styling: Tailwind CSS loaded via CDN (no build step, no npm)
+- Single-page app with tab-based bottom navigation
+- Mobile-first responsive design
 
 ## Database
-<!-- e.g., PostgreSQL, MongoDB, SQLite -->
+- Firebase Firestore (free Spark tier) for the Family Notes board
+- Anonymous read and write access (no login required)
+- Firebase JavaScript SDK loaded via CDN
+- Real-time sync across all family members' devices
 
-## Infrastructure
-<!-- e.g., AWS, Azure, GCP, Docker, local -->
+## Hosting
+- GitHub Pages (free static hosting)
+- App accessible via a single public URL shared with the family
 
-## Testing
-<!-- e.g., Vitest, Jest, Pytest -->
-
-## Build Tools
-<!-- e.g., Vite, Webpack, esbuild -->
-
-## Other
-<!-- Any other relevant technology choices (auth, CI/CD, monitoring, etc.) -->
+## Constraints
+- No server, no backend, no build pipeline required
+- All dependencies loaded via CDN — no npm, no node_modules
+- Must work on iOS Safari and Android Chrome
+- Static content (trains, hotels, guide) readable without internet
+- Notes board requires an internet connection to post and sync
+- App opens directly to content — no login screen, no onboarding
